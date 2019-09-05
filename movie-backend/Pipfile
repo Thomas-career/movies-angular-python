@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+marshmallow-sqlalchemy = "*"
+Flask = "*"
+Flask-RESTful = "*"
+Flask-restplus = "*"
+Flask-Migrate = "*"
+Flask-SQLAlchemy = "*"
+pyjwt = "*"
+pyyaml = "*"
+flask-jwt-extended = "*"
+requests = "*"
+mysqlclient = "*"
+pymysql = "*"
+flask-cors = "*"
+movie = {path = ".",editable = true}
+
+[requires]
+python_version = "3.7"
