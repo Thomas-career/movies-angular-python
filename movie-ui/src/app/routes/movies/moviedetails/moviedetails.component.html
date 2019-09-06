@@ -1,0 +1,54 @@
+<div class="container">
+
+   <div class="card-columns">
+
+
+      <div class="card mb-8">
+         <img class="card-img-top img-fluid" src="{{movieDetails?.Poster}}" alt="Card image cap" />
+         <div class="card-body">
+
+            <p class="d-flex">
+               <span>
+                  <small>
+                     <strong>{{movieDetails?.imdbVotes}}</strong>
+                     <span> Votes</span>
+                  </small>
+               </span>
+               <span class="ml-auto">
+                  <strong>{{movieDetails?.imdbRating}}</strong>
+                  <span class="fa fa-star"></span>
+               </span>
+            </p>
+            <h4 class="card-title">{{movieDetails?.Title}}</h4>
+            <p class="card-text">{{movieDetails?.Genre}}</p>
+            <p class="card-text">
+               <span class="text-sm text-muted">Released {{movieDetails?.Released}}</span>
+            </p>
+         </div>
+      </div>
+   </div>
+
+       <!-- START card-->
+   <div class="card card-default">
+         <!-- <div class="card-header">Rating {{movieDetails.imdbRating}}<span class="fa fa-star"></span></div> -->
+         <div class="card-body">
+   
+            <dl class="row">
+               <dt class="col-sm-3">Plot</dt>
+               <dd class="col-sm-9">{{movieDetails?.Plot}}</dd>
+               <dt class="col-sm-3">Director</dt>
+               <dd class="col-sm-9">{{movieDetails?.Director}}</dd>
+               <dt class="col-sm-3">Writer</dt>
+               <dd class="col-sm-9">{{movieDetails?.Writer}}</dd>
+               <dt class="col-sm-3">Actors</dt>
+               <dd class="col-sm-9">{{movieDetails?.Actors}}</dd>
+               <dt class="col-sm-3">Language</dt>
+               <dd class="col-sm-9">{{movieDetails?.Language}}</dd>
+               <dt class="col-sm-3">Awards</dt>
+               <dd class="col-sm-9">{{movieDetails?.Awards}}</dd>
+            </dl>
+         </div>
+      </div>
+      <!-- END card-->  
+
+</div>

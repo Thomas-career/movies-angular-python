@@ -42,7 +42,7 @@ def update_movie(movie_id, movie_data):
         data.Awards = movie_data.get('Awards') or data.Awards
         data.Poster = movie_data.get('Poster') or data.Poster
         data.Metascore = movie_data.get('Metascore') or data.Metascore
-        data.imdbRating = movie_data.get('Title') or data.imdbRating
+        data.imdbRating = movie_data.get('imdbRating') or data.imdbRating
         data.imdbVotes = movie_data.get('imdbVotes') or data.imdbVotes
         data.imdbID = movie_data.get('imdbID') or data.imdbID
         data.Type = movie_data.get('Type') or data.Type
@@ -57,14 +57,15 @@ def update_movie(movie_id, movie_data):
 
         for x in movie_data.get('Ratings'):
             #print(x)
-            if 'id' in x:
-                ratingdata = db.session.query(Ratings).get(x['id'])
-                ratingdata.Source = x['Source'] or ratingdata.Source
-                ratingdata.Value = x['Value'] or ratingdata.Value
-                data.Ratings.append(ratingdata)
-            else:
-                rating = Ratings(Source=x['Source'], Value=x['Value'], createdAt=datetime.now(), updatedAt=datetime.now())
-                data.Ratings.append(rating)
+            if type(x) is not int:    
+                if 'id' in x:
+                    ratingdata = db.session.query(Ratings).get(x['id'])
+                    ratingdata.Source = x['Source'] or ratingdata.Source
+                    ratingdata.Value = x['Value'] or ratingdata.Value
+                    data.Ratings.append(ratingdata)
+                else:
+                    rating = Ratings(Source=x['Source'], Value=x['Value'], createdAt=datetime.now(), updatedAt=datetime.now())
+                    data.Ratings.append(rating)
 
         db.session.commit()
         movie_data['id'] = movie['id']
@@ -77,7 +78,7 @@ def delete_movie(movie_id):
     if not response.get('message'):
         movie = Movie.query.get_or_404(movie_id)
         movie.delete()
-        response = None
+        response = {'removed':"movie deleted"}
     return response
 
 def get_all_movie():

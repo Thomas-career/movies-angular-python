@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 import { SharedService } from './shared/shared.service'
@@ -13,6 +13,8 @@ export class Service {
   private dataSource = new BehaviorSubject('hi');
   data = this.dataSource.asObservable();
 
+  public currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
   constructor(
     private http: HttpClient,
     private sharedService: SharedService
@@ -25,12 +27,12 @@ export class Service {
 
   // post
   post(url, payload): Observable<any> {
-    return this.http.post(this.sharedService.API_URL + url, payload);
+      return this.http.post(this.sharedService.API_URL + url, payload);
   }
 
   // put
   put(url, payload): Observable<any> {
-    return this.http.put(this.sharedService.API_URL + url, payload);
+      return this.http.put(this.sharedService.API_URL + url, payload);
   }
 
   // get

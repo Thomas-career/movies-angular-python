@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
 
     navCollapsed = true; // for horizontal layout
     menuItems = []; // for horizontal layout
-    user: any;
+    public currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
     isNavSearchVisible: boolean;
     @ViewChild('fsbutton') fsbutton;  // the fullscreen button
@@ -28,7 +28,6 @@ export class HeaderComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.getUserDetails()
         this.isNavSearchVisible = false;
 
         var ua = window.navigator.userAgent;
@@ -49,12 +48,6 @@ export class HeaderComponent implements OnInit {
         this.router.navigate(['/login'])
     }
 
-    getUserDetails() {
-        this.user = JSON.parse(localStorage.getItem('currentUser'));
-        if (this.user) {
-             
-        }
-    }
 
     toggleUserBlock(event) {
         event.preventDefault();

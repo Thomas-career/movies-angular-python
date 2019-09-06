@@ -1,0 +1,283 @@
+<div class="row">
+
+    <div class="col-lg-10">
+        <div class="card card-default">
+            <div class="card-header d-flex align-items-center">
+                <div class="d-flex justify-content-center col">
+                    <div class="h4 m-0 text-center">Movie Information</div>
+                </div>
+
+            </div>
+            <a class="text-muted text-center">NOTE: For multiple entries use "," seperated values </a>
+            <div class="card-body">
+                <div class="row py-4 justify-content-center">
+                    <div class="col-12 col-sm-10">
+                        <!-- <div class="text-right">
+                            <a class="text-muted text-right">NOTE: for multiple entries use "," seperated values</a>
+                         </div> -->
+                        <form class="form-horizontal">
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie1">Title</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie1" type="text" name="Title"
+                                        [(ngModel)]="movieDetails.Title" placeholder="Enter Title" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie2">Year</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie2" type="text" name="Year"
+                                        [(ngModel)]="movieDetails.Year" placeholder="Enter Year" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie3">Rated</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie3" type="text" name="Rated"
+                                        [(ngModel)]="movieDetails.Rated" placeholder="Enter Rated" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie4">Released</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie4" type="text" name="Released"
+                                        [(ngModel)]="movieDetails.Released" placeholder="Enter Release Date" />
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie5">Runtime</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie5" type="text" name="Runtime"
+                                        [(ngModel)]="movieDetails.Runtime" placeholder="Enter Runtime" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie6">Genre</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie6" type="text" name="Genre"
+                                        [(ngModel)]="movieDetails.Genre" placeholder="Enter Genre" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie7">Director</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie7" type="text" name="Director"
+                                        [(ngModel)]="movieDetails.Director" placeholder="Enter Director" />
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie8">Writer</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie8" type="text" name="Writer"
+                                        [(ngModel)]="movieDetails.Writer" placeholder="Enter Writer" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie9">Actors</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie9" type="text" name="Actors"
+                                        [(ngModel)]="movieDetails.Actors" placeholder="Enter Actors" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie10">Plot</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <textarea class="form-control" id="inputMovie10" row="4" name="Plot"
+                                        [(ngModel)]="movieDetails.Plot"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie11">Language</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie11" type="text" name="Language"
+                                        [(ngModel)]="movieDetails.Language" placeholder="Enter Language" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie12">Country</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie12" type="text" name="Country"
+                                        [(ngModel)]="movieDetails.Country" placeholder="Enter Country" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie13">Awards</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie13" type="text" name="Awards"
+                                        [(ngModel)]="movieDetails.Awards" placeholder="Enter Awards" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie14">Poster Url</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie14" type="text" name="Poster"
+                                        [(ngModel)]="movieDetails.Poster" placeholder="Enter Poster" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie15">Metascore</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie15" type="text" name="Metascore"
+                                        [(ngModel)]="movieDetails.Metascore" placeholder="Enter Metascore" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie16">imdbRating</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie16" type="text" name="imdbRating"
+                                        [(ngModel)]="movieDetails.imdbRating" placeholder="Enter imdbRating" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie17">imdbVotes</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie17" type="text" name="imdbVotes"
+                                        [(ngModel)]="movieDetails.imdbVotes" placeholder="Enter imdbVotes" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie18">imdbID</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie18" type="text" name="imdbID"
+                                        [(ngModel)]="movieDetails.imdbID" placeholder="Enter imdbID" />
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie19">Type</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie19" type="text" name="Type"
+                                        [(ngModel)]="movieDetails.Type" placeholder="Enter Type" />
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie21">DVD</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie21" type="text" name="DVD"
+                                        [(ngModel)]="movieDetails.DVD" placeholder="Enter DVD Date" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie22">BoxOffice</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie22" type="text" name="BoxOffice"
+                                        [(ngModel)]="movieDetails.BoxOffice" placeholder="Enter BoxOffice" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie23">Production</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie23" type="text" name="Production"
+                                        [(ngModel)]="movieDetails.Production" placeholder="Enter Production" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie24">Website</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie24" type="text" name="Website"
+                                        [(ngModel)]="movieDetails.Website" placeholder="Enter Website" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputMovie25">Response</label>
+                                <div class="col-xl-10 col-md-9 col-8">
+                                    <input class="form-control" id="inputMovie25" type="text" name="Response"
+                                        [(ngModel)]="movieDetails.Response" placeholder="Enter Response" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row" *ngIf="movieOperation=='add'">
+                                <label class="text-bold col-xl-2 col-md-3 col-4 col-form-label text-right"
+                                    for="inputRating1">Ratings</label>
+                                <div class="col-md-10">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <input class="form-control" id="inputRating1" name="Source"
+                                                [(ngModel)]="movieRatings.Source" type="text" placeholder="Source" />
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <input class="form-control" id="inputRating1" name="Value"
+                                                [(ngModel)]="movieRatings.Value" type="text" placeholder="Value" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div *ngIf="movieOperation=='add'" class="form-group row">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-info" (click)="addMovie()" type="submit">Add</button>
+                                </div>
+                            </div>
+
+                            <div *ngIf="movieOperation=='edit'" class="form-group row">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-info" (click)="updateMovie(movieDetails.id)" type="submit">Update</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

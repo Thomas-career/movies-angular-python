@@ -2,12 +2,12 @@
 <nav class="navbar topnavbar" role="navigation">
     <!-- START navbar header-->
     <div class="navbar-header">
-        <a class="navbar-brand" href="#/">
+        <a class="navbar-brand" routerLink="/">
             <div class="brand-logo">
-                <img class="img-fluid" src="assets/img/imdb_logo.png" alt="App Logo" />
+                <img class="img-fluid" src="assets/img/movies_logo48.png" alt="App Logo" />
             </div>
             <div class="brand-logo-collapsed">
-                <img class="img-fluid" src="assets/img/imdb_logo2.png" alt="App Logo" />
+                <img class="img-fluid" src="assets/img/movies_logo32.png" alt="App Logo" />
             </div>
         </a>
     </div>
@@ -54,14 +54,14 @@
 
 
         <li class="nav-item">
-            <a class="nav-link" *ngIf="!user" (click)="toggleUserBlock($event)">
+            <a class="nav-link" *ngIf="!currentUser" (click)="toggleUserBlock($event)">
                 <em class="icon-user"></em>
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" *ngIf="user" (click)="logout()">
-                <em class="icon-lock"></em>
+            <a class="nav-link" *ngIf="currentUser" (click)="logout()">
+                    <em class="fa-1x mr-2 fas fa-sign-out-alt"></em>
             </a>
         </li>
 

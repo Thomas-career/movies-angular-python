@@ -13,5 +13,8 @@ export class Constants {
     // movie
     public static get getMoviesPaginate(): String { return '/api/v1/movie/page/'; }
     public static get getMoviesById(): String { return '/api/v1/movie/'; }
+    public static get addMovie(): String { return '/api/v1/movie/'; }
+    public static get updateMovie(): String { return '/api/v1/movie/'; }
+    
 
 }

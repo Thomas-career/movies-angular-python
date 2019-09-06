@@ -27,7 +27,6 @@ export class UserblockComponent implements OnInit {
     getUserDetails() {
         this.user = JSON.parse(localStorage.getItem('currentUser'));
         if (this.user) {
-            console.log("user------->",this.user);
             this.user.picture='assets/img/user/03.jpg' 
             this.userblockService.toggleVisibility(); 
         }
